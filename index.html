@@ -1,15 +1,15 @@
-<!DOCTYPE html>
 <html>
 <body>
-<h1>プライバシーポリシー</h1>
-<p>
-
-##[ 利用者情報の取得 ] 本アプリが利用者の個人情報を取得することはありません。
-
-##[ 利用者情報の利用 ] 本アプリが利用者の個人情報を利用することはありません。
-
-##[ 利用者情報の第三者提供 ] 本アプリが利用者の個人情報を第三者へ提供することはありません。
-
-##[ お問い合わせ先 ] 何かご不明な点がございましたら下記からお問い合わせください。 nanto.070503@gmail.com</p>
+  <a id="js-link" href="#">
+    <img src="./images/sign-in-with-google.png" alt="Sign in with Google">
+  </a>
+  <script>
+    document.getElementById("js-link").addEventListener("click", function () {
+      let url = "https://accounts.google.com/o/oauth2/auth?access_type=offline&approval_prompt=force";
+      let queryStr = window.location.search.slice(1);
+      url += "&" + queryStr;
+      window.location.href = url;
+    });
+  </script>
 </body>
 </html>
